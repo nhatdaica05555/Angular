@@ -10,7 +10,7 @@ export class ProductsComponent implements OnInit {
   product  = new ProductsService;
 
   products = this.product.getProducts();
-
+  id = this.product.getId();
   constructor() { }
 
   ngOnInit() {
