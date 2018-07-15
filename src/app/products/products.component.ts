@@ -5,15 +5,5 @@ import {  ProductsService } from './products.service';
   templateUrl: './products.component.html',
   styleUrls: ['./products.component.css']
 })
-export class ProductsComponent implements OnInit {
-
-  product  = new ProductsService;
-
-  products = this.product.getProducts();
-  id = this.product.getId();
-  constructor() { }
-
-  ngOnInit() {
-  }
-
+export class ProductsComponent {
 }

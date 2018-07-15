@@ -1,7 +1,10 @@
-<h1>
-  {{title}}
-</h1>
-
-
-
-<product></product>
+<div class="product">
+  <div *ngFor = "let sp of products" class="item">
+    <img src="{{sp.imageUrl}}" alt="">
+    <div class="item-right">
+      <h3>{{sp.productName}}</h3>
+      <app-star></app-star>
+      <p>{{sp.description}}</p>
+    </div>
+  </div>
+</div>
