@@ -1,3 +1,4 @@
+import { UserFormComponent } from './user-form/user-form.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
@@ -7,14 +8,16 @@ import { AppComponent } from './app.component';
 @NgModule({
   declarations: [
     AppComponent,
-    
+    UserFormComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
   ],
-  providers: [],
+  providers: [
+    
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
