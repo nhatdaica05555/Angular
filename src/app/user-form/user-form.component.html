@@ -18,12 +18,22 @@
         <option value="" *ngFor="let con of countries" [value] = "con">{{con}}</option>
       </select>
     </div>
+    <div class="checkbox">
+      <label for=""> <input type="checkbox" name = "subcribe" [(ngModel)] = "model.subcribe" #subcribe = "ngModel"> Subcribe </label>
+      <p>{{ userForm.value | json }}</p>
+    </div>
+
+    <div class="radio" *ngFor = "let method of gender">
+      <label for=""><input ngModel type="radio" name="gender" id="" [value]="method.id">{{method.name}}</label>
+    </div>
+ 
     <button type = "submit" class="btn btn-default" [disabled]  = "!userForm.form.valid">Submit</button>
     <div [hidden] = "!submitted">
       This is your information! <br>
       Your Firstname : {{model.firstName}} <br>
       Your Email : {{model.email}} <br>
       Your country : {{model.country}}<br>
+      Your status : {{model.subcribe}}<br>
     </div>
   </form>
 </div>
